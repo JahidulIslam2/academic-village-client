@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ProvideAuthContext } from '../../provideAuth/ProvideAuth';
 
 const SignUp = () => {
+const {createUserAc}=useContext(ProvideAuthContext);
+    const handleFormSubmit=(e)=>{
+        e.preventDefault()
+        const form=e.target;
+        const name=form.name.value;
+        const email=form.email.value;
+        const photoURL=form.photoURL.value;
+        const password=form.password.value;
+        console.log(name,email,photoURL,password)
+
+        createUserAc(email,password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user)
+            
+          })
+          .catch((error) => {
+            console.error('error is',error)
+            const errorMessage = error.message;
+          });
+
+
+    }
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -11,7 +35,7 @@ const SignUp = () => {
                         <p className="py-6">please create your learn English Course account</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-                        <form className="card-body">
+                        <form onSubmit={handleFormSubmit} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -22,7 +46,7 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">photo URL</span>
                                 </label>
-                                <input type="text" name='photURL' placeholder="Drop Your Photo URL" className="input input-bordered" />
+                                <input type="text" name='photoURL' placeholder="Drop Your Photo URL" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">

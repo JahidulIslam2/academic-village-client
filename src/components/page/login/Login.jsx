@@ -3,9 +3,22 @@ import { Link } from 'react-router-dom';
 import { ProvideAuthContext } from '../../provideAuth/ProvideAuth';
 
 const Login = () => {
-    const {md}=useContext(ProvideAuthContext);
-    const formSubmitHandler =()=>{
-
+    const {loginUserEmail}=useContext(ProvideAuthContext);
+    const formSubmitHandler =(e)=>{
+            e.preventDefault();
+            const form=e.target;
+            const email=form.email.value;
+            const password=form.password.value;
+            console.log(email,password)
+            loginUserEmail(email,password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user)
+              })
+              .catch((error) => {
+                console.error('error is',error)
+                const errorMessage = error.message;
+              });
     }
     return (
         <div>
