@@ -13,7 +13,7 @@ const Header = () => {
                 </div>
                 <div className="flex">
                     <div className="dropdown dropdown-end">
-                        <nav className='flex lg:space-x-7 sm:flex-none sm:space-x-0 mr-5'>
+                        <nav className='flex lg:space-x-7 md:space-x-7 sm:flex-none sm:space-x-2 mr-5'>
                             <Link className="link link-primary">Courses</Link>
                             <Link className="link link-primary">Faq</Link>
                             <Link className="link link-primary">Blog</Link>
