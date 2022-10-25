@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ProvideAuthContext } from '../../provideAuth/ProvideAuth';
 
 const SignUp = () => {
-const {createUserAc}=useContext(ProvideAuthContext);
+const {createUserAc,updateUserProfile}=useContext(ProvideAuthContext);
     const handleFormSubmit=(e)=>{
         e.preventDefault()
         const form=e.target;
@@ -11,21 +11,33 @@ const {createUserAc}=useContext(ProvideAuthContext);
         const email=form.email.value;
         const photoURL=form.photoURL.value;
         const password=form.password.value;
-        console.log(name,email,photoURL,password)
 
         createUserAc(email,password)
         .then((userCredential) => {
             const user = userCredential.user;
             console.log(user)
             form.reset()
+            UserProfile(name,photoURL);
             
           })
           .catch((error) => {
             console.error('error is',error)
             const errorMessage = error.message;
           });
+    }
 
+    const UserProfile=(name,photoURL)=>{
+        const profile={
+            displayName:name,
+            photoURL:photoURL,
+        }
+        updateUserProfile(profile)
+        .then(()=>{})
+        .catch((error)=>{
+            console.log(error)
+        })
 
+        
     }
     return (
         <div>

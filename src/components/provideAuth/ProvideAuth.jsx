@@ -1,6 +1,6 @@
 import React from 'react';
 import { createContext } from 'react';
-import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, updateProfile } from "firebase/auth";
 import app from "../../firebase/firebase.config";
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -44,10 +44,15 @@ const ProvideAuth = ({children}) => {
         }    
     },[])
 
+    const updateUserProfile=(profile)=>{
+        return updateProfile(auth.currentUser,profile);
+    }
+
     const authInfo={
         createUserAc,
         user,
         loader,
+        updateUserProfile,
         loginUserEmail,
         logInWithGoogle,
         logInWithgitHub,
