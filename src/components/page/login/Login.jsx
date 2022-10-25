@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ProvideAuthContext } from '../../provideAuth/ProvideAuth';
 
 const Login = () => {
-
+    const {md}=useContext(ProvideAuthContext);
     const formSubmitHandler =()=>{
-        
+
     }
     return (
         <div>
@@ -37,6 +38,7 @@ const Login = () => {
                                 <button className="btn btn-success">Google</button>
                                 <p className='text-center my-2'>or</p>
                                 <button className="btn btn-success">Login with github</button>
+                                <p>You Are New! <Link to="/signup">Create New Account</Link></p>
                             </div>
                         </div>
                     </form>
