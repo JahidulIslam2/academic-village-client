@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ProvideAuthContext } from '../../provideAuth/ProvideAuth';
+import { FaRegUser, FaRegUserCircle } from "react-icons/fa";
 
 const Header = () => {
     const {user}=useContext(ProvideAuthContext)
@@ -17,11 +18,10 @@ const Header = () => {
                 <div className="flex">
                     <div className="dropdown dropdown-end">
                         <nav className='flex lg:space-x-7 md:space-x-7 sm:flex-none sm:space-x-2 mr-5'>
-                            <Link className="link link-primary">Courses</Link>
+                            <Link className="link link-primary" to="/courses">Courses</Link>
                             <Link className="link link-primary">Faq</Link>
                             <Link className="link link-primary">Blog</Link>
                             <Link className="link link-primary">Contact</Link>
-                            <Link className="link link-secondary" to="/signUp">SignUp</Link>
                             <Link className="link link-secondary" to="/login">Login</Link>
                             <input type="checkbox" className="toggle" defaultChecked checked />
                         </nav>
@@ -29,12 +29,13 @@ const Header = () => {
 
                     <div className="dropdown dropdown-end">
                       
-                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip="hello">
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom" data-tip={user?.displayName}>
                             <div className="w-10 rounded-full " >
-                                {user?.uid ?
-                                <img src="https://placeimg.com/80/80/people" alt='' />
+                                {user?.photoURL ?
+                                <img src={user?.photoURL} alt='' />
                                 :
-                                <p>user null</p>}
+                                <FaRegUserCircle className='w-auto h-10 '/>}
+                                
                             </div>
                         </label>
 
