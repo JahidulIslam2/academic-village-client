@@ -13,7 +13,7 @@ const MainContent = () => {
     return (
         <div>
            {
-            course.map(p => <ContentCard details={p}></ContentCard>)
+            course.map((p,key )=> <ContentCard details={p} key={key}></ContentCard>)
            }
         </div>
     );

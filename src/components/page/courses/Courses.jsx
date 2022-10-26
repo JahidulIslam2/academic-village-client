@@ -20,7 +20,7 @@ const Courses = () => {
                 <div className="drawer-side">
                     
                     {
-                        courses.map(course => <LeftSideContent course={course}></LeftSideContent>)
+                        courses.map((course,id) => <LeftSideContent course={course} key={id}></LeftSideContent>)
                     }
 
                 </div>
