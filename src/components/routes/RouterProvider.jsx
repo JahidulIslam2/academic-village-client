@@ -7,6 +7,7 @@ import Login from "../page/login/Login";
 import MainContent from "../page/mainContent/MainContent";
 import ContentCard from "../page/mainContentCard/ContentCard";
 import SignUp from "../page/signUp/SignUp";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 import Root from "../root/Root";
 
 
@@ -40,7 +41,7 @@ export const routes=createBrowserRouter([
             },
             {
                 path:'/checkout/:id',
-                element:<Checkout></Checkout>,
+                element:<PrivateRoute><Checkout/></PrivateRoute>,
                 loader: ({params})=> fetch(`http://localhost:5000/course/${params.id}`)
             }
 

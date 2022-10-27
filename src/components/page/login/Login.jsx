@@ -1,9 +1,13 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ProvideAuthContext } from '../../provideAuth/ProvideAuth';
 
 const Login = () => {
     const { loginUserEmail,logInWithGoogle,logInWithgitHub } = useContext(ProvideAuthContext);
+    const location=useLocation();
+    const Navigate=useNavigate();
+    const [error,setError]=useState;
+    const from=location.state?.from?.pathname || '/';
     const formSubmitHandler = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -13,12 +17,14 @@ const Login = () => {
         loginUserEmail(email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                console.log(user)
-                form.reset();
+                setError('');
+                form.reset()
+                Navigate(from,{replace:true})
             })
             .catch((error) => {
                 console.error('error is', error)
                 const errorMessage = error.message;
+                setError(errorMessage);
             });
     }
 
@@ -27,6 +33,7 @@ const Login = () => {
         .then((result)=>{
             const user=result.user;
             console.log(user)
+            Navigate(from,{replace:true})
             
         })
         .catch((error)=>{

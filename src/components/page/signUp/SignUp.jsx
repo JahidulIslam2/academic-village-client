@@ -77,7 +77,7 @@ const {createUserAc,updateUserProfile}=useContext(ProvideAuthContext);
                                 </label>
                             </div>
                             <div className="mt-6 text-center">
-                                <button className="btn btn-primary lg:w-56">Login</button>
+                                <button className="btn btn-primary lg:w-56">Submit</button>
                             </div>
                         </form>
                     </div>

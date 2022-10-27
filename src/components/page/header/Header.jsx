@@ -4,8 +4,13 @@ import { ProvideAuthContext } from '../../provideAuth/ProvideAuth';
 import { FaRegUserCircle } from "react-icons/fa";
 
 const Header = () => {
-    const {user}=useContext(ProvideAuthContext)
-    console.log(user?.displayName)
+    const {user,signOutHandle}=useContext(ProvideAuthContext)
+    
+    const logOutButton=()=>{
+        signOutHandle()
+        .then(()=>{})
+        .catch((error)=>{console.error(error)})
+    }
     return (
         <div>
 
@@ -22,7 +27,11 @@ const Header = () => {
                             <Link className="link link-primary">Faq</Link>
                             <Link className="link link-primary">Blog</Link>
                             <Link className="link link-primary">Contact</Link>
+                            {user?.uid ?
+                            <button onClick={logOutButton}>Log Out</button>
+                            :
                             <Link className="link link-secondary" to="/login">Login</Link>
+                            }
                             <input type="checkbox" className="toggle" defaultChecked checked />
                         </nav>
                     </div>
@@ -47,7 +56,7 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li><Link>Settings</Link></li>
-                            <li><Link>Logout</Link></li>
+                           
 
 
                         </ul>
