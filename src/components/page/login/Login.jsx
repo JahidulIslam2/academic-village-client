@@ -6,7 +6,7 @@ const Login = () => {
     const { loginUserEmail,logInWithGoogle,logInWithgitHub } = useContext(ProvideAuthContext);
     const location=useLocation();
     const Navigate=useNavigate();
-    const [error,setError]=useState;
+    const [error,setError]=useState();
     const from=location.state?.from?.pathname || '/';
     const formSubmitHandler = (e) => {
         e.preventDefault();
@@ -17,7 +17,7 @@ const Login = () => {
         loginUserEmail(email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                setError('');
+                console.log(user)
                 form.reset()
                 Navigate(from,{replace:true})
             })
@@ -75,7 +75,7 @@ const Login = () => {
                                 </label>
                                 <input type="password" name='password' placeholder="password" className="input input-bordered" required/>
                                 <label className="label">
-                                    <Link to="#" className="label-text-alt link link-hover">Forgot password?</Link>
+                                    <Link to="#" className="label-text-alt text-red-500">{error}</Link>
                                 </label>
                             </div>
                             <span className='text-center'>
