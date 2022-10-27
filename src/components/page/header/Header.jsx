@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ProvideAuthContext } from '../../provideAuth/ProvideAuth';
-import { FaRegUser, FaRegUserCircle } from "react-icons/fa";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const Header = () => {
     const {user}=useContext(ProvideAuthContext)
@@ -9,10 +9,10 @@ const Header = () => {
     return (
         <div>
 
-            <div className="navbar bg-amber-900 shadow-lg">
+            <div className="navbar bg-cyan-900 shadow-lg">
                 <div className="flex-1">
                     <Link className="btn btn-ghost normal-case text-xl">Learn English</Link>
-                <img src="icon1.png" alt="" />
+                    <img src="icon.png" className="mr-3 h-8 sm:h-9" alt="Learn English Course" />
 
                 </div>
                 <div className="flex">

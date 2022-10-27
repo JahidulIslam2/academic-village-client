@@ -11,7 +11,7 @@ const MainContent = () => {
         .then(data =>{setCourse(data)})
     },[])
     return (
-        <div>
+        <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
            {
             course.map((p,key )=> <ContentCard details={p} key={key}></ContentCard>)
            }
