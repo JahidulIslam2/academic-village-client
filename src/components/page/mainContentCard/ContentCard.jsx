@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const ContentCard = ({ details }) => {
-
-    const {email,name,phone,picture,title,_id}=details;
+const ContentCard = ({ details,setLeftSide }) => {
+    setLeftSide(details)
+    const {name,picture,_id}=details;
     
     return (
         <div>

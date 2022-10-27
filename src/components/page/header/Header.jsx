@@ -17,7 +17,7 @@ const Header = () => {
             <div className="navbar bg-cyan-900 shadow-lg">
                 <div className="flex-1">
                     <Link className="btn btn-ghost normal-case text-xl">Learn English</Link>
-                    <img src="icon.png" className="mr-3 h-8 sm:h-9" alt="Learn English Course" />
+                    <img src="icon.jpg" className="mr-3 h-8 sm:h-9" alt="Learn English Course" />
 
                 </div>
                 <div className="flex">
@@ -25,7 +25,7 @@ const Header = () => {
                         <nav className='flex lg:space-x-7 md:space-x-7 sm:flex-none sm:space-x-2 mr-5'>
                             <Link className="link link-primary" to="/courses">Courses</Link>
                             <Link className="link link-primary">Faq</Link>
-                            <Link className="link link-primary">Blog</Link>
+                            <Link className="link link-primary" to="/blog">Blog</Link>
                             <Link className="link link-primary">Contact</Link>
                             {user?.uid ?
                             <button onClick={logOutButton}>Log Out</button>

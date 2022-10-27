@@ -1,11 +1,13 @@
 import React from 'react';
+import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import LeftSideContent from '../leftSideContent/LeftSideContent';
 import MainContent from '../mainContent/MainContent';
 
 const Courses = () => {
     const courses =useLoaderData();
-
+    const [courseInfo,setLeftSide]=useState();
+    console.log(courseInfo)
     return (
         <div className="my-6">
             <div className="flex w-full max-h-max ">
@@ -20,7 +22,7 @@ const Courses = () => {
                 <div className="drawer-side">
                     
                     {
-                        courses.map((course,id) => <LeftSideContent course={course} key={id}></LeftSideContent>)
+                        courses.map((course,id) => <LeftSideContent course={course} courseInfo={courseInfo} key={id}></LeftSideContent>)
                     }
 
                 </div>
@@ -28,7 +30,7 @@ const Courses = () => {
                 
                 </div>
                 <div className='border flex-grow place-items-end max-w-full'>
-                  <MainContent></MainContent>
+                  <MainContent setLeftSide={setLeftSide}></MainContent>
                 </div>
             </div>
         </div>

@@ -25,6 +25,7 @@ const CourseDetails = () => {
           <p>phone: {phone}</p>
           <p className='text-white'>{title}</p>
           <div className="card-actions justify-center">
+            
             <button className='btn btn-primary'>Download pdf</button>
             <button className="btn btn-success bg-green-500"><Link to={`/checkout/${_id}`}>Premium Access </Link></button>
           </div>
