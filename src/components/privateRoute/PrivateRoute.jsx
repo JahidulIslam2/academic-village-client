@@ -8,7 +8,7 @@ const PrivateRoute = ({children}) => {
     const location =useLocation();
 
     if(loader){
-       return <h1>loader..</h1>
+       return <progress className="progress w-full color bg-white"></progress>
     }
 
     if(user && user.uid){

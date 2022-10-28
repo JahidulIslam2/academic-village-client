@@ -1,10 +1,8 @@
 import React from 'react';
-import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { ProvideAuthContext } from '../../provideAuth/ProvideAuth';
 
 const Checkout = () => {
-    const { user } = useContext(ProvideAuthContext)
+
     const data = useLoaderData();
     const { email, name, phone, price, duration } = data;
     return (

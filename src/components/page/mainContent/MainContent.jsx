@@ -13,7 +13,7 @@ const MainContent = ({setLeftSide}) => {
     return (
         <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
            {
-            course.map((p,key )=> <ContentCard details={p} setLeftSide={setLeftSide} key={key}></ContentCard>)
+            course.map((p,key )=> <ContentCard details={p} key={key}></ContentCard>)
            }
         </div>
     );

@@ -22,7 +22,6 @@ const {createUserAc,updateUserProfile}=useContext(ProvideAuthContext);
           })
           .catch((error) => {
             console.error('error is',error)
-            const errorMessage = error.message;
           });
     }
 
