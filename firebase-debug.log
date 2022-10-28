@@ -1,0 +1,120 @@
+[debug] [2022-10-28T05:35:40.509Z] ----------------------------------------------------------------------
+[debug] [2022-10-28T05:35:40.512Z] Command:       D:\node.exe C:\Users\jahid\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-10-28T05:35:40.513Z] CLI Version:   11.15.0
+[debug] [2022-10-28T05:35:40.513Z] Platform:      win32
+[debug] [2022-10-28T05:35:40.513Z] Node Version:  v16.15.1
+[debug] [2022-10-28T05:35:40.515Z] Time:          Fri Oct 28 2022 11:35:40 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-10-28T05:35:40.515Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-28T05:35:40.527Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-28T05:35:40.528Z] > authorizing via signed-in user (jahid2111@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jahid\Downloads\Journey With Programming Hero\10th-Milestone-React-Authentication\Assignment\academic-hub
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-28T05:35:55.378Z] > refreshing access token with scopes: []
+[debug] [2022-10-28T05:35:55.381Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-28T05:35:55.381Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-28T05:36:06.752Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-10-28T05:36:11.823Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\jahid\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-10-28T05:46:22.589Z] ----------------------------------------------------------------------
+[debug] [2022-10-28T05:46:22.597Z] Command:       D:\node.exe C:\Users\jahid\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-10-28T05:46:22.600Z] CLI Version:   11.15.0
+[debug] [2022-10-28T05:46:22.600Z] Platform:      win32
+[debug] [2022-10-28T05:46:22.601Z] Node Version:  v16.15.1
+[debug] [2022-10-28T05:46:22.680Z] Time:          Fri Oct 28 2022 11:46:22 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-10-28T05:46:22.681Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-28T05:46:22.743Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-28T05:46:22.744Z] > authorizing via signed-in user (jahid2111@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jahid\Downloads\Journey With Programming Hero\10th-Milestone-React-Authentication\Assignment\academic-hub
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-28T05:46:44.125Z] > refreshing access token with scopes: []
+[debug] [2022-10-28T05:46:44.129Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-28T05:46:44.130Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-28T05:46:55.760Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-10-28T05:47:00.827Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\jahid\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-10-28T05:47:51.141Z] ----------------------------------------------------------------------
+[debug] [2022-10-28T05:47:51.144Z] Command:       D:\node.exe C:\Users\jahid\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-10-28T05:47:51.145Z] CLI Version:   11.15.0
+[debug] [2022-10-28T05:47:51.145Z] Platform:      win32
+[debug] [2022-10-28T05:47:51.145Z] Node Version:  v16.15.1
+[debug] [2022-10-28T05:47:51.147Z] Time:          Fri Oct 28 2022 11:47:51 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-10-28T05:47:51.147Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-28T05:47:51.159Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-28T05:47:51.160Z] > authorizing via signed-in user (jahid2111@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jahid\Downloads\Journey With Programming Hero\10th-Milestone-React-Authentication\Assignment\academic-hub
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-28T05:48:30.889Z] > refreshing access token with scopes: []
+[debug] [2022-10-28T05:48:30.892Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-28T05:48:30.892Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-28T05:48:42.293Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-10-28T05:48:47.321Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\jahid\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
